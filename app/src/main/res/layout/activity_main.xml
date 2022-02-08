@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="674dp"
+        android:layout_alignTop="@+id/cordinate"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-404dp"
+        android:layout_marginBottom="0dp">
+
+        <LinearLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="10dp"
+            android:orientation="vertical"
+            android:verticalSpacing="10dp">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cordinate"
+        android:layout_width="wrap_content"
+        android:layout_height="269dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="461dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="1dp">
+
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/floatingActionsMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="76dp"
+            android:layout_marginBottom="129dp"
+            app:fab_addButtonColorNormal="#36b5ff"
+            app:fab_addButtonColorPressed="#ffff">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/cameraButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="#36b5ff"
+                app:fab_colorPressed="#ffff"
+                app:fab_icon="@drawable/camera_icon"
+                app:fab_size="mini"
+                app:fab_title="Camera" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/galeryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="#36b5ff"
+                app:fab_colorPressed="#ffff"
+                app:fab_icon="@drawable/photo_icon"
+                app:fab_size="mini"
+                app:fab_title="Image" />
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>
